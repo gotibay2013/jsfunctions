@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample1</title>
+</head>
+<body>
+    <p>Input Minimum Number: <input id="minNumber"></p>
+      <p>Input Maximum Number: <input id="maxNumber"></p>
+      <button onclick="random()">Random Numbers</button>
+      <p id="answer"></p>
+      
+
+
+<script>
+function random()
+{
+        
+          const num1 = parseInt(document.getElementById("minNumber").value);
+          const num2 = parseInt(document.getElementById("maxNumber").value); 
+          const random = Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+          document.getElementById("answer").innerHTML = "Random value between Minimum Number and Maximum Number is  " +random;
+}
+
+</script>
+</body>
+</html>

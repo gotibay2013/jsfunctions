@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample8</title>
+</head>
+
+<body>
+        <p> Enter the Number: <input type = "number" name = "number" id = "number" required>
+        <button type = "button" onclick = "checkForPrime()" > Prime or Not? </button>
+        <div class = "resultText">
+        <p id = "result"> </p>
+       
+        <script type = "text/javascript">
+        function checkForPrime() {
+        num = document.getElementById("number").value;
+        if(num == '' || num < 1) {
+        document.getElementById("result").style.color = "red";
+        document.getElementById("result").innerHTML = "Please Enter a Valid Number";
+        return;
+        }
+        var i;
+        var flag = true;
+        if (num == 1) {
+        flag = false;
+        } else {
+        for(i = 2; i < num-1; i++) {
+        if (num % i == 0) {
+        flag = false;
+        break;
+        }
+        }
+        }
+        if(flag == true) {
+        document.getElementById("result").style.color = "blue";
+        document.getElementById("result").innerHTML = "The number: " + num + " is a Prime Number";
+        } else {
+        document.getElementById("result").style.color = "red";
+        document.getElementById("result").innerHTML = "The number: " + num + " is NOT a Prime Number";
+        }
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample7</title>
+</head>
+
+<body>
+      <p>Input Integer 1: <input type="number" id="numb1" name="numb1"></p>
+      <p>Input Integer 2: <input type="number" id="numb2" name="numb2"></p>
+      <p>Input Integer 3: <input type="number" id="numb3" name="numb3"></p>
+      <button onclick="myFunction()">Find Last Digits of Numbers</button>
+      <p id="answer"></p>
+      
+
+<script>
+function myFunction()
+{
+    const num1 = document.getElementById("numb1").value;
+    const num2 = document.getElementById("numb2").value;
+    const num3 = document.getElementById("numb3").value;
+
+    const result1 = num1 % 10;
+    const result2 = num2 % 10;
+    const result3 = num3 % 10;
+    
+    if(result1 == result2 && result1 == result3) {
+        document.getElementById("answer").innerHTML = "Numbers have the same last digit" +" " +result1 +" " +result2 +" "  +result3 ;
+    }
+    else {
+        document.getElementById("answer").innerHTML = "Numbers dont have the same last digit" +" " +result1 +" " +result2 +" "  +result3 ;
+    }
+
+    
+
+}
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample2</title>
+</head>
+<body>
+      
+      <p>Input First Number: <input id="firstNumber"></p>
+      <p>Input Second Number: <input id="secondNumber"></p>
+      <input type="button" onclick="addNumbers()" Value="Add"/>
+      <input type="button" onclick="subtractNumbers()" Value="Subtract"/>
+      <input type="button" onclick="multiplyNumbers()" Value="Multiply"/>
+      <input type="button" onclick="divideNumbers()" Value="Divide"/>
+      <p id="answer"></p>
+      
+
+
+<script>
+function addNumbers()
+{         
+          const num1 = parseFloat(document.getElementById("firstNumber").value);
+          const num2 = parseFloat(document.getElementById("secondNumber").value); 
+          result = num1 + num2;
+          document.getElementById("answer").innerHTML = "Answer is  " +result;
+}
+
+function subtractNumbers()
+{         
+          const num1 = parseFloat(document.getElementById("firstNumber").value);
+          const num2 = parseFloat(document.getElementById("secondNumber").value); 
+          result = num1 - num2;
+          document.getElementById("answer").innerHTML = "Answer is  " +result;
+}
+
+function multiplyNumbers()
+{         
+          const num1 = parseFloat(document.getElementById("firstNumber").value);
+          const num2 = parseFloat(document.getElementById("secondNumber").value); 
+          result = num1 * num2;
+          document.getElementById("answer").innerHTML = "Answer is  " +result;
+}
+
+function divideNumbers()
+{         
+    
+          const num1 = parseFloat(document.getElementById("firstNumber").value);
+          const num2 = parseFloat(document.getElementById("secondNumber").value); 
+          result = num1 / num2;
+          document.getElementById("answer").innerHTML = "Answer is  " +result;
+         
+}
+
+
+</script>
+</body>
+</html>

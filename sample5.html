@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample4</title>
+</head>
+
+<body>
+      <p>Enter Whole Number: <input type="number" id="wholeNumber"></p>
+      <button onclick="myFunction()">Square Root</button>
+      <p id="answer"></p>
+      
+
+
+<script>
+function myFunction()
+{
+    result = document.getElementById("wholeNumber").value;
+    document.getElementById("answer").innerHTML = +Math.sqrt(result);
+
+}
+
+</script>
+</body>
+</html>
+
+
